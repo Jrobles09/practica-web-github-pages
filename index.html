@@ -1,58 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Menú simple </title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center;
+            background: #f4f4f4;
         }
         nav {
             background-color: #333;
-            padding: 10px 0;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            display: inline;
         }
         nav a {
+            display: block;
             color: white;
-            margin: 0 15px;
+            text-align: center;
+            padding: 14px 20px;
             text-decoration: none;
             font-weight: bold;
+            transition: background-color 0.3s ease;
         }
         nav a:hover {
-            text-decoration: underline;
-        }
-        .content {
-            padding: 20px;
-        }
-        img {
-            max-width: 300px;
-            margin: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: #555;
         }
     </style>
 </head>
 <body>
-
-<nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#galeria">Galería</a>
-    <a href="#contacto">Contacto</a>
-</nav>
-
-<div class="content">
-    <h1>Bienvenido</h1>
-    <p>Menú de navegación y algunas imágenes de ejemplo.</p>
-
-    <section id="galeria">
-        <h2>Galería de imágenes</h2>
-        <img src="https://via.placeholder.com/300x200?text=Imagen+1" alt="Imagen 1">
-        <img src="https://via.placeholder.com/300x200?text=Imagen+2" alt="Imagen 2">
-        <img src="https://via.placeholder.com/300x200?text=Imagen+3" alt="Imagen 3">
-    </section>
-</div>
-
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <div style="text-align:center; padding:20px;">
+        <h1>Bienvenido</h1>
+        <p>Menú de navegación.</p>
+    </div>
 </body>
 </html>
