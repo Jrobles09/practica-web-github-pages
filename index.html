@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[translate:Mi Página en GitHub Pages]</title>
+<title>[Mi Página en GitHub Pages]</title>
 <style>
 body {
     margin: 0;
@@ -38,6 +38,13 @@ p.subtitle {
     color: #fdfdfd;
     max-width: 600px;
     margin: 0 auto;
+    animation: fadeIn 3s ease-in forwards;
+    opacity: 0;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 .container {
     max-width: 900px;
@@ -50,10 +57,24 @@ p.subtitle {
     padding: 25px;
     margin-bottom: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUpFade 1s ease forwards;
 }
-.card h2 {
-    margin-top: 0;
-    color: #444;
+.card:nth-child(1) {
+    animation-delay: 0.5s;
+}
+.card:nth-child(2) {
+    animation-delay: 1s;
+}
+.card:nth-child(3) {
+    animation-delay: 1.5s;
+}
+@keyframes slideUpFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .btn {
     display: inline-block;
@@ -63,10 +84,11 @@ p.subtitle {
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
+    transition: 0.3s, transform 0.3s;
 }
 .btn:hover {
     background: #ff4f90;
+    transform: scale(1.1);
 }
 footer {
     text-align: center;
@@ -80,33 +102,33 @@ footer {
 </head>
 <body>
 <header>
-<h1>[translate:Bienvenidos a mi Página Web]</h1>
-<p class="subtitle">[translate:Esta es una versión más elaborada y bonita creada para mi práctica de despliegue en GitHub Pages.]</p>
+<h1>[Bienvenidos a mi Página Web]</h1>
+<p class="subtitle">[Esta es una versión más elaborada y bonita creada para mi práctica de despliegue en GitHub Pages.]</p>
 </header>
 <div class="container">
 <div class="card">
-<h2>[translate:¿Qué es esta página?]</h2>
-<p>[translate:Esta página fue desplegada utilizando] <b>GitHub Pages</b>, [translate:un servicio gratuito que permite publicar sitios web estáticos directamente desde un repositorio en GitHub.]</p>
+<h2>[¿Qué es esta página?]</h2>
+<p>[Esta página fue desplegada utilizando] <b>GitHub Pages</b>, [un servicio gratuito que permite publicar sitios web estáticos directamente desde un repositorio en GitHub.]</p>
 </div>
 <div class="card">
-<h2>[translate:Características]</h2>
+<h2>[Características]</h2>
 <ul>
-<li>[translate:Diseño moderno con fondo degradado]</li>
-<li>[translate:Tarjetas con sombras]</li>
-<li>[translate:Botones interactivos]</li>
-<li>[translate:Totalmente responsiva (se adapta a celular)]</li>
+<li>[Diseño moderno con fondo degradado]</li>
+<li>[Tarjetas con sombras]</li>
+<li>[Botones interactivos]</li>
+<li>[Totalmente responsiva (se adapta a celular)]</li>
 </ul>
 </div>
 <div class="card">
-<h2>[translate:Enlace al Repositorio]</h2>
-<p>[translate:Puedes ver el código fuente directamente en mi repositorio de GitHub:]</p>
+<h2>[Enlace al Repositorio]</h2>
+<p>[Puedes ver el código fuente directamente en mi repositorio de GitHub:]</p>
 <a class="btn" href="https://github.com/Jrobles09/practica-web-github-pages" target="_blank">
-[translate:Ver en GitHub]
+[Ver en GitHub]
 </a>
 </div>
 </div>
 <footer>
-© 2025 - [translate:Creado por Jorge como práctica de despliegue web]
+© 2025 - [Creado por Jorge como práctica de despliegue web]
 </footer>
 </body>
 </html>
